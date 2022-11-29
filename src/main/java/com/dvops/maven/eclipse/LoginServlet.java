@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.RequestDispatcher;
 
 /**
  * Servlet implementation class LoginServlet
@@ -49,8 +50,10 @@ public class LoginServlet extends HttpServlet {
 		String correctPassword = "password";
 		// if username and password correct
 		if (userName.compareTo(correctUsername) == 0 && password.compareTo(correctPassword) == 0) {
-			PrintWriter writer = response.getWriter();
-			writer.println("You have Successfully Login!");
+			//PrintWriter writer = response.getWriter();
+			//writer.println("You have Successfully Login!");
+		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Homepage.jsp");
+		dispatcher.forward(request, response);
 		} else {
 			PrintWriter writer = response.getWriter();
 			writer.println("Wrong Credentials provided");
