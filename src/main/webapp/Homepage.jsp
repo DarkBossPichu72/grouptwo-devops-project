@@ -10,6 +10,7 @@
 <html>
 <head>
 <title>RESTAURANT WEBSITE</title>
+<form action="HomeSevlet" method="post">
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
 </head>
@@ -28,7 +29,7 @@
             <li><a href="#!">Today Special</a></li>
             <li><a href="#!">Menu Card</a></li>
             <li><a href="#!">Reservation</a></li>
-            <li><a href="#!">Review</a></li>
+            <input type="submit" value="Review" />
             <li><a href="#!">Contact</a></li>
         </ul>
     </div>
