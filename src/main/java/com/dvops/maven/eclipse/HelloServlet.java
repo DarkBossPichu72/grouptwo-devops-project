@@ -10,7 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.Printer;
+//import java.io.Printer;
 
 /**
  * Servlet implementation class HelloServlet
@@ -61,10 +61,10 @@ public class HelloServlet extends HttpServlet {
 		String correctPassword = "password";
 		// if username and password correct
 		if (userName.compareTo(correctUsername) == 0 && password.compareTo(correctPassword) == 0) {
-			PrintWriter writer = response.getWriter();
+			writer = response.getWriter();
 			writer.println("You have Successfully Login!");
 		} else {
-			PrintWriter writer = response.getWriter();
+			writer = response.getWriter();
 			writer.println("Wrong Credentials provided");
 		}
 
